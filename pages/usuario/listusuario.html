@@ -1,0 +1,31 @@
+﻿<div ng-controller="ListaUsuarioController">
+
+    <div class="form-group">
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-filter"></i></span>
+            <div class="icon-addon addon-lg">
+                <input type="text" placeholder="" class="form-control" ng-model="busca">
+                <label for="busca" class="glyphicon glyphicon-search" rel="tooltip" title="busca"></label>
+            </div>
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Vai!</button>
+            </span>
+        </div>
+    </div>
+
+    <a href="#/cadastroUsuario" class="btn btn-success">+ Novo</a>
+    <hr />
+
+    <table class="table table-hover">
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Ações</th>
+        </tr>
+        <tr ng-repeat="oUsuario in Usuarios| filter:busca">
+            <td>{{oUsuario.usu_nome}}</td>
+            <td>{{oUsuario.usu_email}}</td>
+            <td><a href="#/editUsuario/{{oUsuario.usu_id}}">Editar</a></td>
+        </tr>
+    </table>
+</div>

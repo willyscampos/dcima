@@ -1,0 +1,30 @@
+﻿<div ng-controller="PaginacaoController">
+
+    <form ng-submit="fnPesquisar()" class="form-group">
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-filter"></i></span>
+            <div class="icon-addon addon-lg">
+                <input type="text" placeholder="" class="form-control" ng-model="Objeto.pesquisa">
+                <label for="busca" class="glyphicon glyphicon-search" rel="tooltip" title="busca"></label>
+            </div>
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button">pesquisar</button>
+            </span>
+        </div>
+    </form>
+
+
+    <table class="table table-hover">
+        <tr>
+            <th>Código</th>
+            <th>Empresa</th>
+        </tr>
+        <tr ng-repeat="oEmpresa in Lista" ng-click="testeId(oEmpresa.prv_id)">
+            <td>{{oEmpresa.prv_id}}</td>
+            <td>{{oEmpresa.prv_shortdesc}}</td>
+        </tr>
+    </table>
+
+    <pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()"  max-size="maxSize" boundary-links="true"></pagination>    
+
+</div>
