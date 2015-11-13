@@ -1,0 +1,28 @@
+﻿<div ng-controller="ConfigurationController">
+    <div ui-content-for="title">
+        <span>Gasolina</span>
+    </div>
+    <div class="scrollable">
+        <div class="scrollable-content section">
+
+            <form role="form" ng-submit='Registro()'>
+                <fieldset>
+                    <legend>Quanto você pretende gastar esse mês?</legend>
+                    <div class="form-group has-success has-feedback">
+                        <label>Valor</label>
+                        <input type="number"
+                               ng-model="record.con_goal"
+                               class="form-control"
+                               placeholder="Valor do Mês">
+                    </div>                    
+                </fieldset>
+                <hr>
+                <button class="btn btn-primary btn-block" type="submit">
+                    Registrar
+                </button>
+
+
+            </form>
+        </div>
+    </div>
+</div>
