@@ -39,12 +39,12 @@
     }
 
 
+    var lObjeto = [];
     $scope.LoadInfo = function () {
         alert('e agora....info')
-        $http.post(lServidor + '/home',[]).success(simpleCallback);        
-    }
-
-    
+        alert(lServidor + '/home');
+        $http.post(lServidor + '/home', lObjeto).success(simpleCallback);
+    }    
 
     function simpleCallback(data, status) {
         var Total = 0;
