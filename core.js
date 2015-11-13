@@ -46,6 +46,7 @@ app.controller('MainController', function ($rootScope, $scope, $http) {
     $rootScope.ano = lano;
     $rootScope.DataCorrente = data
 
+    alert('start.')
     // Needed for the loading screen
     $rootScope.$on('$routeChangeStart', function () {
         $rootScope.loading = true;
@@ -56,13 +57,19 @@ app.controller('MainController', function ($rootScope, $scope, $http) {
         $rootScope.loading = false;
     });
 
-
-    $http.get($rootScope.Servidor + '/getmenu').success(simpleCallback);
+    alert('e agora....')
+	alert($rootScope.Servidor);
+    $http.get($rootScope.Servidor + '/getmenu').success(simpleCallback).error(errorCallback);
 
     function simpleCallback(data, status) {
         var Total = 0;
+        alert(data)
         $scope.Lista = data;
-    }    
+    }
+
+    function errorCallback(response) {
+        alert(response);
+    }   
 
     // sidebar right
     // 
