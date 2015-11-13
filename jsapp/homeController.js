@@ -14,7 +14,7 @@
 
     $scope.Lista = [];
 
-    var lServidor = "http://201.90.97.8:80";
+    var lServidor = "http://201.90.97.8:8080";
 
 
     $scope.myInterval = 3000;
