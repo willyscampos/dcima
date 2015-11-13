@@ -56,13 +56,13 @@
     <!-- ng cordova js -->
     <!--<script src="third/ng-cordova.min.js"></script>-->
     <!-- cordova script (this will be a 404 during development) -->
-    <script src="cordova.js"></script>
+    <!--<script src="cordova.js"></script>-->
 
 
 </head>
 <body ng-app="MobileDcima" ng-controller="MainController">
     <!-- Sidebars -->
-    <div  ng-include="'sidebar.html'"
+    <div ng-include="'sidebar.html'" ng-init="LoadMenu()"
          ui-track-as-search-param='true'
          class="sidebar sidebar-left"></div>
 

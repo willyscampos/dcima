@@ -18,7 +18,6 @@ app.config(function ($routeProvider) {
     $routeProvider.when('/sair', { templateUrl: 'pages/beta/sair.html', reloadOnSearch: false });
     //novo
     $routeProvider.when('/cadastroUsuario', { templateUrl: 'pages/beta/usuario.html', reloadOnSearch: false });
-
 });
 
 app.controller('MainController', function ($rootScope, $scope, $http) {
@@ -59,16 +58,15 @@ app.controller('MainController', function ($rootScope, $scope, $http) {
         $rootScope.loading = false;
     });
 
-    $scope.lObjeto = {};
+    var lObjeto = [];
 
     $scope.LoadMenu = function () {        
         $http.post(lServidor + '/getmenu', lObjeto).success(simpleCallback).error(errorCallback);
-
     }
 
     function simpleCallback(data, status) {
         var Total = 0;
-        alert(data);
+        //alert(data);
         $scope.Lista = data;
     }
 
@@ -84,6 +82,7 @@ app.controller('MainController', function ($rootScope, $scope, $http) {
       { name: 'no Evento', online: false }
     ];
 
+    
 
 });
 

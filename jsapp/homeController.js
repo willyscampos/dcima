@@ -14,7 +14,7 @@
 
     $scope.Lista = [];
 
-    var lServidor = "http://201.90.97.8:8080";
+    var lServidor = "http://201.90.97.8";
 
 
     $scope.myInterval = 3000;
@@ -41,15 +41,15 @@
 
     var lObjeto = [];
     $scope.LoadInfo = function () {
-        alert('e agora....info')
-        alert(lServidor + '/home');
+        //alert('e agora....info')
+        //alert(lServidor + '/home');
         $http.post(lServidor + '/home', lObjeto).success(simpleCallback);
     }    
 
     function simpleCallback(data, status) {
         var Total = 0;
-        alert('dados');
-        alert(data);
+        //alert('dados');
+        //alert(data);
         $scope.Lista = data;
     }
 
