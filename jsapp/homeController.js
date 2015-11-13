@@ -14,6 +14,8 @@
 
     $scope.Lista = [];
 
+    var lServidor = "http://201.90.97.8:80";
+
 
     $scope.myInterval = 3000;
     $scope.slides = [
@@ -39,13 +41,15 @@
 
     $scope.LoadInfo = function () {
         alert('e agora....info')
-        $http.post($rootScope.Servidor + '/home',[]).success(simpleCallback);        
+        $http.post(lServidor + '/home',[]).success(simpleCallback);        
     }
 
     
 
     function simpleCallback(data, status) {
         var Total = 0;
+        alert('dados');
+        alert(data);
         $scope.Lista = data;
     }
 

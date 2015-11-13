@@ -62,7 +62,7 @@
 </head>
 <body ng-app="MobileDcima" ng-controller="MainController">
     <!-- Sidebars -->
-    <div ng-init="LoadMenu()" ng-include="'sidebar.html'"
+    <div  ng-include="'sidebar.html'"
          ui-track-as-search-param='true'
          class="sidebar sidebar-left"></div>
 
@@ -100,7 +100,7 @@
                 <a href="#/home" class="btn btn-navbar"><i class="fa fa-home fa-navbar fa-2x"></i><span class="pull-mymenu">Home</span></a></a>
             </div>
         </div>
-
+    
         <!-- App Body -->
         <div class="app-body" ng-class="{loading: loading}">
             <div ng-show="loading" class="app-content-loading">

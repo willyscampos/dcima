@@ -39,6 +39,8 @@ app.controller('MainController', function ($rootScope, $scope, $http) {
     
     //$rootScope.Servidor = "http://192.168.1.192";
     $rootScope.Servidor = "http://201.90.97.8";
+
+    var lServidor = "http://201.90.97.8";
     var data = new Date();
     lmes = data.getMonth() + 1;
     lano = data.getFullYear();
@@ -46,7 +48,7 @@ app.controller('MainController', function ($rootScope, $scope, $http) {
     $rootScope.ano = lano;
     $rootScope.DataCorrente = data
 
-    alert('start.')
+    
     // Needed for the loading screen
     $rootScope.$on('$routeChangeStart', function () {
         $rootScope.loading = true;
@@ -57,14 +59,16 @@ app.controller('MainController', function ($rootScope, $scope, $http) {
         $rootScope.loading = false;
     });
 
-    $scope.LoadMenu = function () {
-        alert('e agora....loadmenu')
-        $http.post($rootScope.Servidor + '/getmenu',[]).success(simpleCallback).error(errorCallback);
+    $scope.lObjeto = {};
+
+    $scope.LoadMenu = function () {        
+        $http.post(lServidor + '/getmenu', lObjeto).success(simpleCallback).error(errorCallback);
 
     }
 
     function simpleCallback(data, status) {
         var Total = 0;
+        alert(data);
         $scope.Lista = data;
     }
 
