@@ -62,16 +62,7 @@ app.controller('MainController', function ($rootScope, $scope, $http) {
     function simpleCallback(data, status) {
         var Total = 0;
         $scope.Lista = data;
-    }
-
-    document.addEventListener("deviceready", function () {
-        var device = $cordovaDevice.getDevice();
-        var cordova = $cordovaDevice.getCordova();
-        var model = $cordovaDevice.getModel();
-        var platform = $cordovaDevice.getPlatform();
-        var uuid = $cordovaDevice.getUUID();
-        var version = $cordovaDevice.getVersion();
-    }, false);
+    }    
 
     // sidebar right
     // 
