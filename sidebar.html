@@ -12,21 +12,24 @@
         <!--akira-->
         <div class="list-group" ui-turn-off='uiSidebarLeft' ng-show="menu2">
 
-            <a class="list-group-item" href="#/bancos">
-                <i class="fa fa-university brown spaces01"></i>
-                <span class="pull-mymenu">Bancos</span>
+            <a ng-repeat="row in Lista" class="list-group-item" href="#/conteudo/{{row.term_id}}">
+                <i class="fa {{row.slug}} brown spaces01"></i>
+                <span class="pull-mymenu">{{row.name}}</span>
             </a>
 
-            <a class="list-group-item" href="#/hoteis">
-                <i class="fa fa-bed brown spaces01"></i>
-                <span class="pull-mymenu">Hotéis</span>
-            </a>
-
-            <!--akira-->
-
+            <!--<a class="list-group-item" href="#/setup">
+                <i class="fa fa-cog brown spaces01"></i>
+                <span class="pull-mymenu">Configurações</span>
+            </a>-->
+            <!--
             <a class="list-group-item" href="#/lancamentoVenda">
                 <i class="fa fa-map-signs  brown spaces01"></i>
                 <span class="pull-mymenu">Pontos Turísticos</span>
+            </a>
+
+            <a class="list-group-item" href="#/transporte">
+                <i class="fa fa-bus brown spaces01"></i>
+                <span class="pull-mymenu">Transporte Público</span>
             </a>
 
             <a class="list-group-item" href="#/saldo">
@@ -38,12 +41,13 @@
                 <i class="fa fa-angellist brown spaces01"></i>
                 <span class="pull-mymenu">Alternativo</span>
             </a>
+
             <a class="list-group-item" href="#/saldo">
                 <i class="fa fa-slideshare brown spaces01"></i>
                 <span class="pull-mymenu">O Evento</span>
-            </a>
-
-            <a class="list-group-item" href="#/saldo">
+            </a>-->
+            
+            <!--<a class="list-group-item" href="#/saldo">
                 <i class="fa fa-hand-peace-o brown spaces01"></i>
                 <span class="pull-mymenu">Perguntas</span>
             </a>
@@ -51,7 +55,8 @@
             <a class="list-group-item" href="#/saldo">
                 <i class="fa fa-weixin brown spaces01"></i>
                 <span class="pull-mymenu">Chat</span>
-            </a>
+            </a>-->
+
             <!--akira-->
 
 

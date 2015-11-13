@@ -13,25 +13,13 @@
                 </slide>
             </carousel>
 
-            <div class="welcome">
+            <!--teste-->
+
+            <div ng-repeat="row in Lista" class="welcome">
                 <div class="welcm-grids">
                     <div class="welcm-info">
-                        <h3>Maiandeua em palavras e imagens</h3>
-                        <p>
-                            O silêncio para se ouvir o vento
-                            A vida da praia
-                            O chão branco de areia fina
-                            Carimbó, reggae, noite, lua
-                            Horizonte infinito de mar e rio
-                            Folhas de árvores nas águas
-                            Pesca, peixe de brilho de sol
-                            Chuva de rede
-                            Princesa e seu lago
-                            Carroças e carroceiros num vai-e-vem.
-                            <br />
-                            Encantos. Encantada.
-                            <br />
-                            Maiandeua
+                        <h3>{{row.post_title}}</h3>
+                        <p ng-bind-html="SkipValidation(row.post_content)">
                         </p>
                     </div>
                 </div>
@@ -39,7 +27,7 @@
             </div>
 
 
-            <div class="welcome">
+            <!--<div class="welcome">
                 <div class="welcm-grids">
                     <div class="welcm-info">
                         <h3>A Moça do Táxi</h3>
@@ -51,7 +39,7 @@
                     </div>
                 </div>
                 <div class="clearfix"></div>
-            </div>
+            </div>-->
 
 
 

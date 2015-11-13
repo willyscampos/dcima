@@ -29,7 +29,7 @@
 
 }());
 
-app.controller('HomeController', function ($rootScope, $scope, $http, $location) {
+app.controller('XHomeController', function ($rootScope, $scope, $http, $location) {
     // init
        
 
