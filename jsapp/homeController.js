@@ -37,7 +37,12 @@
     }
 
 
-    $http.get($rootScope.Servidor + '/gethome').success(simpleCallback);
+    $scope.LoadInfo = function () {
+        alert('e agora....info')
+        $http.post($rootScope.Servidor + '/home',[]).success(simpleCallback);        
+    }
+
+    
 
     function simpleCallback(data, status) {
         var Total = 0;
