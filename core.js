@@ -57,13 +57,14 @@ app.controller('MainController', function ($rootScope, $scope, $http) {
         $rootScope.loading = false;
     });
 
-    alert('e agora....')
-	alert($rootScope.Servidor);
-    $http.get($rootScope.Servidor + '/getmenu').success(simpleCallback).error(errorCallback);
+    $scope.LoadMenu = function () {
+        alert('e agora....loadmenu')
+        $http.post($rootScope.Servidor + '/getmenu',[]).success(simpleCallback).error(errorCallback);
+
+    }
 
     function simpleCallback(data, status) {
         var Total = 0;
-        alert(data)
         $scope.Lista = data;
     }
 
