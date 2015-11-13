@@ -1,0 +1,18 @@
+﻿<div class="scrollable" ng-controller="conteudoController">
+    <div class="scrollable-content section_login">
+        <div class="section">
+
+            <div ng-repeat="row in Lista" class="welcome">
+                <div class="welcm-grids">
+                    <div class="welcm-info">
+                        <h3>{{row.post_title}}</h3>
+                        <p ng-bind-html="SkipValidation(row.post_content)">
+                        </p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>          
+
+        </div>
+    </div>
+</div>
